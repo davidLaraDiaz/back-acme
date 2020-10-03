@@ -8,4 +8,26 @@ use Illuminate\Database\Eloquent\Model;
 class Registro extends Model
 {
     use HasFactory;
+
+    protected $table = 'registro';
+
+    protected $fillable = 
+    [
+        'id',
+        'fecha'
+    ];
+
+    public function vehiculo(){
+    	return $this->belongTo('App\Models\Vehiculo', 'placa');
+ 
+    }
+
+    public function conductor(){
+    	return $this->belongTo('App\Models\Conductor', 'numero_cedula');
+ 
+    }
+    
+
+    public $timestamps = false;
+ 
 }

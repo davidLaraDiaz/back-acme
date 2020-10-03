@@ -8,4 +8,26 @@ use Illuminate\Database\Eloquent\Model;
 class Vehiculo extends Model
 {
     use HasFactory;
+
+    protected $table = 'vehiculo';
+
+    protected $fillable = 
+    [
+        'placa',
+		'color',
+		'marca',
+		'tipo_vehiculo'
+    ];
+
+    public function propietario(){
+    	return $this->belongTo('App\Models\Propietario', 'numero_cedula');
+ 
+    }
+
+    public function registros(){
+    	return $this->hasMany('App\Models\Registro');
+    }
+
+    public $timestamps = false;
+
 }
