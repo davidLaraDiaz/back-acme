@@ -29,14 +29,12 @@ class VehiculoController extends Controller
     {
         $vehiculo = new Vehiculo;
 
-        $vehiculo->id = $request->id;
         $vehiculo->placa = $request->placa;
         $vehiculo->color = $request->color;
         $vehiculo->marca = $request->marca;
-        $vehiculo->modelo = $request->modelo;
+        $vehiculo->tipo_vehiculo = $request->tipo_vehiculo;
 
-        $vehiculo->id_propietario = $request->id_propietario;
-        $vehiculo->id_tipo = $request->id_tipo;
+        $vehiculo->numero_cedula = $request->numero_cedula;
 
         $vehiculo->save();
     }
@@ -60,20 +58,19 @@ class VehiculoController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  string  $placa
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $placa)
     {
-        $vehiculo = Vehiculo::where('id', $id);
+        $vehiculo = Vehiculo::where('placa', $placa);
 
         $vehiculo->placa = $request->placa;
         $vehiculo->color = $request->color;
         $vehiculo->marca = $request->marca;
-        $vehiculo->modelo = $request->modelo;
+        $vehiculo->tipo_vehiculo = $request->tipo_vehiculo;
 
-        $vehiculo->id_propietario = $request->id_propietario;
-        $vehiculo->id_tipo = $request->id_tipo;
+        $vehiculo->numero_cedula = $request->numero_cedula;
 
         $vehiculo->update($request->all());
     }
@@ -81,12 +78,12 @@ class VehiculoController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  string  $placa
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($placa)
     {
-        $vehiculo = Vehiculo::where('id', $id);
+        $vehiculo = Vehiculo::where('placa', $placa);
         $vehiculo->delete();
     }
 }

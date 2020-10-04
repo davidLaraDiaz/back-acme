@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\PropietarioController;
+use App\Http\Controllers\API\VehiculoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\API\PropietarioController;
 
 Route::apiResources([
     'propietario' => PropietarioController::class,
-    //'vehiculo' => VehiculoController::class,
+    'vehiculo' => VehiculoController::class,
     //'tipo_auto' => Tipo_autoController::class,
     //'parqueadero' => ParqueaderoController::class,
     //'registro' => RegistroController::class,
