@@ -11,7 +11,7 @@ use App\Models\Vehiculo;
 use DB;
 
 class RegistroController extends Controller
-{º
+{
     /**
      * Display a listing of the resource.
      *
