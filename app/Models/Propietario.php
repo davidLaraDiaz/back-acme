@@ -17,7 +17,7 @@ class Propietario extends Model
 		'segundo_nombre',
 		'apellidos',
 		'direccion',
-		'telefono' 
+		'telefono',
 		'ciudad'
     ];
 
