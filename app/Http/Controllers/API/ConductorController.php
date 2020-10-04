@@ -33,7 +33,7 @@ class ConductorController extends Controller
         $conductor->primer_nombre = $request->primer_nombre;
         $conductor->segundo_nombre = $request->segundo_nombre;
         $conductor->apellidos = $request->apellidos;
-        $conductor->direcion = $request->direccion;
+        $conductor->direccion = $request->direccion;
         $conductor->telefono = $request->telefono;
         $conductor->ciudad = $request->ciudad;
 
@@ -65,7 +65,7 @@ class ConductorController extends Controller
         $conductor->primer_nombre = $request->primer_nombre;
         $conductor->segundo_nombre = $request->segundo_nombre;
         $conductor->apellidos = $request->apellidos;
-        $conductor->direcion = $request->direccion;
+        $conductor->direccion = $request->direccion;
         $conductor->telefono = $request->telefono;
         $conductor->ciudad = $request->ciudad;
 
