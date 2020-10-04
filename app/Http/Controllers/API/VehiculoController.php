@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Vehiculo;
+use App\Models\Propietario;
 
 class VehiculoController extends Controller
 {
@@ -47,8 +48,9 @@ class VehiculoController extends Controller
      */
     public function show($placa)
     {
-        return Vehiculo::where('placa', $placa)->get();
-        
+        $vehiculo = Vehiculo::where('placa', $placa)->get();
+
+        return $vehiculo;
     }
 
 

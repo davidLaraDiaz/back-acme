@@ -16,13 +16,14 @@ class Vehiculo extends Model
         'placa',
 		'color',
 		'marca',
-		'tipo_vehiculo'
+        'tipo_vehiculo'
     ];
 
     public function propietario(){
-    	return $this->belongTo('App\Models\Propietario', 'numero_cedula');
+    	return $this->belongTo('App\Models\Propietario');
  
     }
+
 
     public function registros(){
     	return $this->hasMany('App\Models\Registro');

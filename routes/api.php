@@ -25,6 +25,5 @@ Route::apiResources([
     'propietario' => PropietarioController::class,
     'vehiculo' => VehiculoController::class,
     'conductor' => ConductorController::class,
-    'registro' => RegistroController::class,
-    //'informe' => Informe::class
+    'registro' => RegistroController::class
 ]);
