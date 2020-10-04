@@ -33,7 +33,7 @@ class PropietarioController extends Controller
         $propietario->primer_nombre = $request->primer_nombre;
         $propietario->segundo_nombre = $request->segundo_nombre;
         $propietario->apellidos = $request->apellidos;
-        $propietario->direcion = $request->direccion;
+        $propietario->direccion = $request->direccion;
         $propietario->telefono = $request->telefono;
         $propietario->ciudad = $request->ciudad;
 
